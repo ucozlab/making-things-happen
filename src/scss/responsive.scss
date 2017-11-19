@@ -1,0 +1,54 @@
+@media screen and (min-width: 991px) and (max-width: 1366px) {
+  .page-title {
+    top: 60%;
+    &__content {
+      line-height: 1rem;
+      font-size: 1rem;
+      span {
+        height: 30px;
+      }
+      &-1 {
+        top: -30px;
+      }
+      &-3 {
+        top: -10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hidden-lg-down {
+    display: none !important;
+  }
+  .mailform-select, .mailform-input, .mailform-submit {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hidden-md-down {
+    display: none !important;
+  }
+  .col-12-768 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-title {
+    top: 60%;
+    &__content {
+      line-height: 1rem;
+      font-size: 1rem;
+      span {
+        height: 30px;
+      }
+      &-1 {
+        top: -30px;
+      }
+      &-3 {
+        top: -10px;
+      }
+    }
+  }
+}

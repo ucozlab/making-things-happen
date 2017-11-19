@@ -1,0 +1,120 @@
+.ui {
+  &-select, &-input, &-submit {
+    height: 44px;
+  }
+  &-select {
+    background: $white;
+    width: 100%;
+    position: relative;
+    &--active {
+      .ui-select__title {
+        background-color: $light;
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &__title {
+      @extend .bold;
+      line-height: 48px;
+      color: $main;
+      font-size: 1rem;
+      text-transform: uppercase;
+      position: relative;
+      padding: 0 20px 0 20px;
+      cursor: pointer;
+      height: 44px;
+      transition: $transition;
+      &:after {
+        content: "";
+        border-right: 8px solid transparent;
+        border-top: 8px solid $red;
+        border-left: 8px solid transparent;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        margin-top: -6px;
+        transition: $transition;
+      }
+      &:hover {
+        background-color: $light;
+      }
+    }
+    &__dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: $white;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+      z-index: 1;
+      &-item {
+        padding: 0 20px;
+        line-height: 48px;
+        color: $main;
+        font-size: 1rem;
+        text-transform: uppercase;
+        border-bottom: 1px dashed $red;
+        cursor: pointer;
+        height: 44px;
+        transition: $transition;
+        &:hover {
+          background-color: $light;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  &-input {
+    background: $white;
+    width: 100%;
+    position: relative;
+    transition: $transition;
+    border: 1px solid transparent;
+    line-height: 48px;
+    color: $main;
+    font-size: 1rem;
+    padding: 0 20px 0 20px;
+    height: 44px;
+    &:focus {
+      border: 1px solid $main;
+      outline: none;
+    }
+  }
+  &-button {
+    @extend .bold;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    transition: $transition;
+    border: 1px solid transparent;
+    line-height: 48px;
+    font-size: 1rem;
+    padding: 0 20px 0 20px;
+    height: 44px;
+    cursor: pointer;
+    text-transform: uppercase;
+    &--black {
+      background-color: $black;
+      color: $white;
+      &:hover {
+        background: lighten($black, 5%);
+      }
+    }
+  }
+  &-link {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
+    &--white {
+      color: $white;
+      &:hover {
+        color: $main;
+      }
+    }
+  }
+}

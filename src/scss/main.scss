@@ -1,0 +1,175 @@
+@font-face{font-family:EurostileReg;src:url('../fonts/Eurostile-Reg.otf');}
+@font-face{font-family:EurostileHea;src:url('../fonts/Eurostile-Hea.otf');}
+
+/* menu fixes */
+.close_menu {
+  margin-top: 20px;
+  text-align: center;
+  line-height: 44px;
+  cursor: pointer;
+  padding: 1px 0 0 2px;
+}
+
+.house_menu {
+  line-height: 44px;
+  padding: 2px 0 0 0;
+  text-align: center;
+  display: inline-block;
+}
+
+#sidebar ul li a {
+  padding: 13px 30px 7px 30px;
+}
+
+/* page styles */
+
+.page-title {
+  display: block;
+  color: $main;
+  text-transform: uppercase;
+  position: absolute;
+  top: 70%;
+  text-align: center;
+  width: 100%;
+  &__content {
+    @extend .bold;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    display: inline-block;
+    position: relative;
+    height: 34px;
+    left: -10px;
+    span {
+      float: left;
+      padding: 10px 10px 0 10px;
+    }
+    &-1 {
+      background: $white;
+      position: relative;
+      top: -34px;
+      left: 20px;
+    }
+    &-2 {
+      background: $red;
+      color: $white;
+    }
+    &-3 {
+      background: $white;
+      font-style: italic;
+      position: relative;
+      top: -8px;
+    }
+  }
+}
+
+.block {
+  &-image {
+    img {
+      width: 100%;
+      display: block;
+      margin: 0;
+    }
+  }
+  &-title {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    &__name {
+      @extend .bold;
+      display: inline-block;
+      padding: 5px 5px 1px 5px;
+      background: $white;
+      line-height: 1rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+    &__position {
+      display: block;
+      padding: 5px 5px 1px 18px;
+      background: $white;
+      @extend .regular;
+      line-height: 0.8rem;
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      position: relative;
+      margin-left: 15px;
+      &:before {
+        content: "";
+        border-bottom: 5px solid transparent;
+        border-top: 5px solid transparent;
+        border-left: 7px solid $red;
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        margin-top: -5px;
+      }
+      &--left {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.mailform {
+  padding: 3rem 0;
+  color: $white;
+  &-text {
+    text-align: center;
+    margin: 0 0 15px 0;
+    &__title {
+      @extend .bold;
+      font-size: 1rem;
+      line-height: 1rem;
+      margin-bottom: 5px;
+    }
+    &__description {
+      letter-spacing: 0;
+    }
+  }
+  &-select, &-input, &-submit {
+    padding: 0 15px;
+  }
+  &-submit {
+    &__description {
+      padding: 10px;
+      text-align: center;
+    }
+  }
+}
+
+.services {
+  padding: 3rem 0;
+  color: $gray;
+  a {
+    color: $gray;
+    cursor: pointer;
+    &:hover {
+      color: $black;
+    }
+  }
+  &-title {
+    @extend .bold;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    margin: 0 0 1.25rem 0;
+  }
+  &-block {
+    padding: 0 15px;
+    &__title {
+      @extend .bold;
+      text-transform: uppercase;
+      font-size: 1rem;
+      line-height: 1rem;
+      margin-bottom: 0.25rem;
+    }
+    &__list {
+      margin-bottom: 1.5rem;
+      &-item {
+        padding: 1px 0;
+        display: block;
+      }
+    }
+  }
+}
