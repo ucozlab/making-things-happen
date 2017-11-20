@@ -485,7 +485,9 @@ button {
   .hidden-lg-down {
     display: none !important; }
   .mailform-select, .mailform-input, .mailform-submit {
-    padding: 0; } }
+    padding: 0; }
+  .ui-select__title, .ui-select__dropdown-item {
+    font-size: 0.8rem; } }
 
 @media screen and (max-width: 768px) {
   .hidden-md-down {
@@ -493,7 +495,22 @@ button {
   .col-12-768 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
-    max-width: 100%; } }
+    max-width: 100%; }
+  .ui-select__title, .ui-select__dropdown-item {
+    font-size: 0.7rem;
+    padding: 0 10px; } }
+
+@media screen and (max-width: 680px) {
+  .ui-select__title, .ui-select__dropdown-item {
+    font-size: 0.6rem;
+    padding: 0 5px; } }
+
+@media screen and (max-width: 576px) {
+  .ui-select__title, .ui-select__dropdown-item {
+    font-size: 1rem;
+    padding: 0 20px; }
+  .mailform-select, .mailform-input, .mailform-submit {
+    margin: 0 0 15px 0; } }
 
 @media screen and (max-width: 480px) {
   .page-title {
