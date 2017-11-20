@@ -70,6 +70,6 @@ gulp.task('connect', function() {
 });
 
 //Watch task
-gulp.task('default', ['webserver', 'compile-scss', 'compile-js', 'watch'] );
+gulp.task('default', ['connect', 'compile-scss', 'compile-js', 'watch'] );
 
 gulp.task('build', ['compile-scss', 'compile-js'] );
